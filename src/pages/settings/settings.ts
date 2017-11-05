@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage} from 'ionic-angular';
+import {IonicPage, Toggle} from 'ionic-angular';
+import {SettingsService} from '../../service/settings';
 
 @IonicPage()
 @Component({
@@ -7,12 +8,12 @@ import { IonicPage} from 'ionic-angular';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
-
-  constructor() {
+  constructor(private settingsService: SettingsService) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+  OnChange(toggle : Toggle) {
+    this.settingsService.changeBackground(toggle.checked);
   }
-
+  checkBackgroud() {
+    return this.settingsService.checkBackgroud();
+  }
 }

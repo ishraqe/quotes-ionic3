@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-buttons start >
+    <ion-buttons start>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
@@ -15,7 +15,7 @@
 <ion-content padding>
     <ion-list>
       <ion-item-sliding *ngFor="let quote of quotes">
-        <ion-item (click)="onViewQuote(quote)">
+        <ion-item [color]="background()" (click)="onViewQuote(quote)">
           <h2>{{quote.person}}</h2>
           <p>{{quote.text}}</p>
         </ion-item>
