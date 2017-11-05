@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{person}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-center>
+  <ion-card>
+    <ion-card-content>
+      {{text}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button
+        ion-button small outline color="danger" (click)="onClose(true)">Remove Favorite</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <button ion-button color="danger" (click)="onClose()">close</button>
+</ion-content>
