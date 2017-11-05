@@ -11,9 +11,10 @@ export class QuotePage {
   text: string = '';
   constructor(public viewCtrl: ViewController,public navParams: NavParams) {
   }
-  onClose(remove: false) {
-    this.viewCtrl.dismiss(remove);
+  onClose(value) {
+    this.viewCtrl.dismiss(value);
   }
+
   ionViewDidLoad() {
    this.person= this.navParams.get('person');
    this.text= this.navParams.get('text');
